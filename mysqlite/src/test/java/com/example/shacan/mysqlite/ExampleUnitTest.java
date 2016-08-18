@@ -1,4 +1,4 @@
-package com.example.shacan.pushdemo;
+package com.example.shacan.mysqlite;
 
 import org.junit.Test;
 
