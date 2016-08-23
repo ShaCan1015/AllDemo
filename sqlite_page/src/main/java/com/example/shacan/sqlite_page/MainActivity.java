@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<User> user = dao.query(currentPage, pageSize);
         userList.addAll(user);
+        sqLiteAdapter.notifyDataSetChanged();
         setNumPage();
 
     }
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         int count = dao.queryPage();
         //总页数
         totalPage = count % pageSize == 0 ? count / pageSize : count / pageSize + 1;
-        sqLiteAdapter.notifyDataSetChanged();
         text_page.setText(currentPage + "/" + totalPage);
     }
 
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     List<User> users = dao.query(currentPage, pageSize);
                     userList.clear();//清空适配器
                     userList.addAll(users);
+                    sqLiteAdapter.notifyDataSetChanged();
                     setNumPage();
                 }
                 break;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     List<User> users = dao.query(currentPage, pageSize);
                     userList.clear();//清空适配器
                     userList.addAll(users);
+                    sqLiteAdapter.notifyDataSetChanged();
                     setNumPage();
                 }
                 break;
