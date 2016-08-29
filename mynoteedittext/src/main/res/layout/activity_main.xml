@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:can="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shacan.mynoteedittext.MainActivity">
+
+    <com.example.shacan.mynoteedittext.widget.noteEditTextView
+        android:id="@+id/noteEditText_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="请输入内容："
+        android:gravity="center"
+        android:textColor="#00f"
+        android:textSize="20sp"
+        can:lineColor="#f00"
+        can:lineStrokeWidth="1"
+        android:padding="25dp"/>
+</RelativeLayout>
